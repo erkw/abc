@@ -9,10 +9,9 @@
 <body>
 
   <div class="developer">Developer: Kwan, Eric
-    <span id = "counter">##</span>
   </div>
 
-  <div id="screen display">
+  <div id="screen-display">
     <div class="abc">A</div>
     <div class="abc">B</div>
     <div class="abc">C</div>
@@ -68,14 +67,8 @@
 
   </div>
 
-  <script>
-    document.getElementById("counter").innerHTML = 52;
-    document.getElementById("counter").style.fontSize = "70px";
-    document.getElementById("counter").style.display = "block";
-    document.write("Developer: Eric Kwan" + new Date())
-    console.log("Developer is Eric Kwan")
-    console.log("We are testing the console")
-  </script>
+  <div>Row Count: <span id = "rowCount">0</span></div>
 
+  <script src='/main.js'></script>
 </body>
 </html>
