@@ -1,0 +1,23 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div.developer{
+  font-size: 200%;
+  margin-bottom: .2in;
+}
+
+div.abc{
+  font-size: 35pt;
+  float: left;
+  margin: 3px;
+  border: solid 1px black;
+  height: 1in;
+  width: 1in;
+  text-align: center;
+  padding-top: 30px;
+}
+
+div.highlight{
+  background-color: antiquewhite;
+}
