@@ -1,33 +1,32 @@
 //Developer: Eric Kwan
 
 function abc(mode) {
-    let abc = "abcdefghijklmnopqrstuvwxyz";
+  let abc = "abcdefghijklmnopqrstuvwxyz";
 
-    if (mode == "A" || mode == "Z") {
-        abc = abc.toUpperCase();
-    }
+  if (mode == "A" || mode == "Z") {
+    abc = abc.toUpperCase();
+  }
 
-    abc = abc.split("");
+  abc = abc.split("");
 
-    if (mode == "Z" || mode == "z") {
-        abc = abc.reverse();
-    }
+  if (mode == "Z" || mode == "z") {
+    abc = abc.reverse();
+  }
 
-    return abc;
+  return abc;
 }
 
 function generateABC(modes) {
-    let letters = modes.split("");
-    let results = [];
+  let letters = modes.split("");
+  let results = [];
 
-    letters.forEach(e => {
-        let alphabets = abc(e);
-        results.push(alphabets);
-    });
+  letters.forEach((e) => {
+    let alphabets = abc(e);
+    results.push(alphabets);
+  });
 
-    return results.flat();
+  return results.flat();
 }
 
 let letters = generateABC("aZzA");
 console.log({ letters, size: letters.length });
-

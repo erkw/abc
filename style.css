@@ -1,14 +1,14 @@
-*{
+* {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 10pt;
 }
 
-div.developer{
+div.developer {
   font-size: 200%;
-  margin-bottom: .2in;
+  margin-bottom: 0.2in;
 }
 
-div.abc{
+div.abc, div.abcS52 {
   font-size: 35pt;
   float: left;
   margin: 3px;
@@ -19,12 +19,19 @@ div.abc{
   padding-top: 30px;
 }
 
-div.highLight{
+div.abcS52 {
+  font-size: 17pt;
+  height: 0.5in;
+  width: 0.5in;
+  padding-top: 15px;
+}
+
+div.highLight {
   background-color: antiquewhite;
   border: dashed 1px black;
 }
 
-#screen-display{
+#screen-display {
   /* background-color: pink; */
   border: solid 1px black;
   height: 10in;
