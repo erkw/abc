@@ -7,7 +7,14 @@
     <link href="/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="developer">Developer: Kwan, Eric</div>
+    
+    <input type="radio" name="mode" id="" data-mode="a" onClick="countFromRadio"> abc
+    <input type="radio" name="mode" id="" data-mode="z" onClick="countFromRadio"> cba
+    <input type="radio" name="mode" id="" data-mode="A" onClick="countFromRadio"> ABC
+    <input type="radio" name="mode" id="" data-mode="Z" onClick="countFromRadio"> CBA
+    <input type="radio" name="mode" id="" data-mode="aA" onClick="countFromRadio"> abcABC
+    <input type="radio" name="mode" id="" data-mode="Az" onClick="countFromRadio"> ABCabc
+    <input type="radio" name="mode" id="" data-mode="Zz" onClick="countFromRadio"> CBAcba
 
     <div id="screen-display">
       <div class="abc">A</div>
@@ -63,9 +70,12 @@
       <div class="abc">y</div>
       <div class="abc">z</div>
     </div>
-
+    
     <div>Row Count: <span id="rowCount">0</span></div>
+    <div class="developer">Developer: Kwan, Eric
+      <span id="counter">##</span>
+    </div>
 
     <script src="/ABC123Counter.js"></script>
   </body>
-</html>
+  </html>

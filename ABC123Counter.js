@@ -40,10 +40,17 @@ function updatePage(mode) {
     style = "abcS52"
   }
 
+  let divCount = document.getElementById("counter");
+  divCount.innerHTML = results.length;
+
   results.forEach((e) => {
     let newElement = document.createElement("div");
     newElement.innerHTML = e;
     newElement.classList.add(style);
     divABC.appendChild(newElement);
   });
+}
+
+function countFromRadio(){
+  console.log({test: new Date})
 }
