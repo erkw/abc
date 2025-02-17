@@ -36,7 +36,7 @@ function updatePage(mode) {
   divABC.innerHTML = "";
 
   let style = "abc"
-  if (results.length > 26){
+  if (results.length > 53){
     style = "abcS52"
   }
 
@@ -51,6 +51,8 @@ function updatePage(mode) {
   });
 }
 
-function countFromRadio(){
-  console.log({test: new Date})
+function countFromRadio(pThis){
+  let mode = pThis.dataset.mode;
+  updatePage(mode);
+  console.log({test: new Date(), mode})
 }
