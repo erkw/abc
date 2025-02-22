@@ -6,15 +6,158 @@
     <title>ABC 123 Counter</title>
     <link href="/style.css" rel="stylesheet" />
   </head>
+
   <body>
-    
-    <input type="radio" name="mode" id="" data-mode="a" onClick="countFromRadio(this)"> abc
-    <input type="radio" name="mode" id="" data-mode="z" onClick="countFromRadio(this)"> cba
-    <input type="radio" name="mode" id="" data-mode="A" onClick="countFromRadio(this)"> ABC
-    <input type="radio" name="mode" id="" data-mode="Z" onClick="countFromRadio(this)"> CBA
-    <input type="radio" name="mode" id="" data-mode="aA" onClick="countFromRadio(this)"> abcABC
-    <input type="radio" name="mode" id="" data-mode="Aa" onClick="countFromRadio(this)"> ABCabc
-    <input type="radio" name="mode" id="" data-mode="Zz" onClick="countFromRadio(this)"> CBAcba
+    <table>
+      <tr>
+        <td>
+          <fieldset id="fsMode">
+            <legend>Mode</legend>
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="a"
+                onClick="countFromRadio(this)"
+              />
+              abc</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="z"
+                onClick="countFromRadio(this)"
+              />
+              cba</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="A"
+                onClick="countFromRadio(this)"
+              />
+              ABC</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="Z"
+                onClick="countFromRadio(this)"
+              />
+              CBA</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="aA"
+                onClick="countFromRadio(this)"
+              />
+              abcABC</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="Aa"
+                onClick="countFromRadio(this)"
+                checked
+              />
+              ABCabc</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="Zz"
+                onClick="countFromRadio(this)"
+              />
+              CBAcba</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="mode"
+                id=""
+                data-mode="aZz"
+                onClick="countFromRadio(this)"
+              />
+              abcCBAcba</span
+            >
+            <input type="text" id="abcGenrator" value="Aa" />
+          </fieldset>
+        </td>
+        <td>
+          <fieldset id="fsHighlight">
+            <legend>Highlight</legend>
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="highLight"
+                id=""
+                data-highLight="v"
+                onClick="highLight(this)"
+              />
+              Vowel</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="highLight"
+                id=""
+                data-highLight="c"
+                onClick="highLight(this)"
+              />
+              Consonant</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="highLight"
+                id=""
+                data-highLight="n"
+                onClick="highLight(this)"
+                checked
+              />
+              None</span
+            >
+            <span
+              ><input
+                title="abc"
+                type="radio"
+                name="highLight"
+                id=""
+                data-highLight="a"
+                onClick="highLight(this)"
+              />
+              All</span
+            >
+            <input type="text" id="highLightSelected" value="n" />
+          </fieldset>
+        </td>
+      </tr>
+    </table>
 
     <div id="screen-display">
       <div class="abc">A</div>
@@ -70,12 +213,13 @@
       <div class="abc">y</div>
       <div class="abc">z</div>
     </div>
-    
+
     <div>Row Count: <span id="rowCount">0</span></div>
-    <div class="developer">Developer: Kwan, Eric
+    <div class="developer">
+      Developer: Kwan, Eric
       <span id="counter">##</span>
     </div>
 
     <script src="/ABC123Counter.js"></script>
   </body>
-  </html>
+</html>

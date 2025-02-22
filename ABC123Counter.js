@@ -28,6 +28,22 @@ function generateABC(modes) {
   return results.flat();
 }
 
+function highLight(pThis) {
+  let highLight = pThis.dataset.highlight;
+  console.log({ highLight, dataSet: pThis.dataset });
+  let highLightSelected = document.getElementById("highLightSelected");
+  highLightSelected.value = highLight;
+}
+
+function countFromRadio(pThis) {
+  let mode = pThis.dataset.mode;
+  console.log({ dataSet: pThis.dataset });
+  updatePage(mode);
+
+  let abcGenrator = document.getElementById("abcGenrator");
+  abcGenrator.value = mode;
+}
+
 function updatePage(mode) {
   let divABC = document.getElementById("screen-display");
   let results = generateABC(mode);
@@ -35,9 +51,11 @@ function updatePage(mode) {
 
   divABC.innerHTML = "";
 
-  let style = "abc"
-  if (results.length > 53){
-    style = "abcS52"
+  let style = "abc";
+  if (results.length > 53) {
+    style = "abcS52";
+  } else if (results.length < 30) {
+    style = "abcS26";
   }
 
   let divCount = document.getElementById("counter");
@@ -49,10 +67,4 @@ function updatePage(mode) {
     newElement.classList.add(style);
     divABC.appendChild(newElement);
   });
-}
-
-function countFromRadio(pThis){
-  let mode = pThis.dataset.mode;
-  updatePage(mode);
-  console.log({test: new Date(), mode})
 }
