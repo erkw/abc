@@ -1,225 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABC 123 Counter</title>
-    <link href="/style.css" rel="stylesheet" />
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC 123 Counter</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <h1>Kwan, Eric ABCCounter</h1>
     <table>
-      <tr>
-        <td>
-          <fieldset id="fsMode">
-            <legend>Mode</legend>
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="a"
-                onClick="countFromRadio(this)"
-              />
-              abc</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="z"
-                onClick="countFromRadio(this)"
-              />
-              cba</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="A"
-                onClick="countFromRadio(this)"
-              />
-              ABC</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="Z"
-                onClick="countFromRadio(this)"
-              />
-              CBA</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="aA"
-                onClick="countFromRadio(this)"
-              />
-              abcABC</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="Aa"
-                onClick="countFromRadio(this)"
-                checked
-              />
-              ABCabc</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="Zz"
-                onClick="countFromRadio(this)"
-              />
-              CBAcba</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="mode"
-                id=""
-                data-mode="aZz"
-                onClick="countFromRadio(this)"
-              />
-              abcCBAcba</span
-            >
-            <input type="text" id="abcGenrator" value="Aa" />
-          </fieldset>
-        </td>
-        <td>
-          <fieldset id="fsHighlight">
-            <legend>Highlight</legend>
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="highLight"
-                id=""
-                data-highLight="v"
-                onClick="highLight(this)"
-              />
-              Vowel</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="highLight"
-                id=""
-                data-highLight="c"
-                onClick="highLight(this)"
-              />
-              Consonant</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="highLight"
-                id=""
-                data-highLight="n"
-                onClick="highLight(this)"
-                checked
-              />
-              None</span
-            >
-            <span
-              ><input
-                title="abc"
-                type="radio"
-                name="highLight"
-                id=""
-                data-highLight="a"
-                onClick="highLight(this)"
-              />
-              All</span
-            >
-            <input type="text" id="highLightSelected" value="n" />
-          </fieldset>
-        </td>
-      </tr>
+        <tr>
+            <td>
+                <fieldset id="fsMode">
+                    <legend>mode</legend>
+                    <span><input title="abc" name="mode" data-mode="a" type="radio" onclick="countFromRadio(this)">
+                        abc</span>
+                    <span><input title="abc" name="mode" data-mode="z" type="radio" onclick="countFromRadio(this)">
+                        cba</span>
+                    <span><input title="abc" name="mode" data-mode="A" type="radio" onclick="countFromRadio(this)">
+                        ABC</span>
+                    <span><input title="abc" name="mode" data-mode="Z" type="radio" onclick="countFromRadio(this)">
+                        CBA</span>
+                    <span><input title="abc" name="mode" data-mode="aA" type="radio" onclick="countFromRadio(this)">
+                        abcABC</span>
+                    <span><input title="abc" name="mode" data-mode="Aa" type="radio" onclick="countFromRadio(this)"
+                            checked> ABCabc</span>
+                    <span><input title="abc" name="mode" data-mode="Zz" type="radio" onclick="countFromRadio(this)">
+                        CBAcba</span>
+                    <span><input title="abc" name="mode" data-mode="aZz" type="radio" onclick="countFromRadio(this)">
+                        abcCBAcba</span>
+                    <span><input title="num" name="mode" data-mode="123" type="radio" onclick="countFromRadio(this)">
+                        123</span>
+                    <span><input title="num" name="mode" data-mode="321" type="radio" onclick="countFromRadio(this)">
+                        321</span>
+                    <input type="hidden" id="abcGenerator" value="Aa" />
+                </fieldset>
+            </td>
+            <td>
+                <fieldset id="fsHighlight">
+                    <legend>Highlight</legend>
+                    <span><input title="abc" name="highLight" data-highLight="v" type="radio" onclick="highLight(this)">
+                        Vowels</span>
+                    <span><input title="abc" name="highLight" data-highLight="c" type="radio" onclick="highLight(this)">
+                        Consonant</span>
+                    <span><input title="abc" name="highLight" data-highLight="n" type="radio" onclick="highLight(this)"
+                            checked> None</span>
+                    <span><input title="abc" name="highLight" data-highLight="a" type="radio" onclick="highLight(this)">
+                        All</span>
+                    <span><input title="num" name="highLight" data-highLight="e" type="radio" onclick="highLight(this)">
+                        Even</span>
+                    <span><input title="num" name="highLight" data-highLight="o" type="radio" onclick="highLight(this)">
+                        Odd</span>
+                    <span><input title="num" name="highLight" data-highLight="5" type="radio" onclick="highLight(this)">
+                        5's</span>
+                    <input type="hidden" id="highLightSelected" value="n" />
+                </fieldset>
+
+            </td>
+        </tr>
     </table>
 
-    <div id="screen-display">
-      <div class="abc">A</div>
-      <div class="abc">B</div>
-      <div class="abc">C</div>
-      <div class="abc">D</div>
-      <div class="abc">E</div>
-      <div class="abc">F</div>
-      <div class="abc">G</div>
-      <div class="abc">H</div>
-      <div class="abc">I</div>
-      <div class="abc">J</div>
-      <div class="abc">K</div>
-      <div class="abc">L</div>
-      <div class="abc">M</div>
-      <div class="abc">N</div>
-      <div class="abc">O</div>
-      <div class="abc">P</div>
-      <div class="abc">Q</div>
-      <div class="abc">R</div>
-      <div class="abc">S</div>
-      <div class="abc">T</div>
-      <div class="abc">U</div>
-      <div class="abc">V</div>
-      <div class="abc">W</div>
-      <div class="abc">X</div>
-      <div class="abc">Y</div>
-      <div class="abc">Z</div>
-      <div class="abc">a</div>
-      <div class="abc">b</div>
-      <div class="abc">c</div>
-      <div class="abc">d</div>
-      <div class="abc">e</div>
-      <div class="abc">f</div>
-      <div class="abc">g</div>
-      <div class="abc">h</div>
-      <div class="abc">i</div>
-      <div class="abc">j</div>
-      <div class="abc">k</div>
-      <div class="abc">l</div>
-      <div class="abc">m</div>
-      <div class="abc">n</div>
-      <div class="abc">o</div>
-      <div class="abc">p</div>
-      <div class="abc">q</div>
-      <div class="abc">r</div>
-      <div class="abc">s</div>
-      <div class="abc">t</div>
-      <div class="abc">u</div>
-      <div class="abc">v</div>
-      <div class="abc">w</div>
-      <div class="abc">x</div>
-      <div class="abc">y</div>
-      <div class="abc">z</div>
+     <div id="screen-display">
+        <div class="abc ">A</div>
+        <div class="abc">B</div>
+        <div class="abc">C</div>
+        <div class="abc">D</div>
+        <div class="abc ">E</div>
+        <div class="abc">F</div>
+        <div class="abc">G</div>
+        <div class="abc">H</div>
+        <div class="abc ">I</div>
+        <div class="abc">J</div>
+        <div class="abc">K</div>
+        <div class="abc">L</div>
+        <div class="abc">M</div>
+        <div class="abc">N</div>
+        <div class="abc">O</div>
+        <div class="abc">P</div>
+        <div class="abc">Q</div>
+        <div class="abc">R</div>
+        <div class="abc">S</div>
+        <div class="abc">T</div>
+        <div class="abc ">U</div>
+        <div class="abc">V</div>
+        <div class="abc">W</div>
+        <div class="abc">X</div>
+        <div class="abc">Y</div>
+        <div class="abc">Z</div>
+        <div class="abc ">a</div>
+        <div class="abc">b</div>
+        <div class="abc">c</div>
+        <div class="abc">d</div>
+        <div class="abc">e</div>
+        <div class="abc">f</div>
+        <div class="abc">g</div>
+        <div class="abc">h</div>
+        <div class="abc"> i</div>
+        <div class="abc">j</div>
+        <div class="abc">k</div>
+        <div class="abc">l</div>
+        <div class="abc">m</div>
+        <div class="abc">n</div>
+        <div class="abc ">o</div>
+        <div class="abc">p</div>
+        <div class="abc">q</div>
+        <div class="abc">r</div>
+        <div class="abc">s</div>
+        <div class="abc">t</div>
+        <div class="abc">u</div>
+        <div class="abc">v</div>
+        <div class="abc">w</div>
+        <div class="abc">x</div>
+        <div class="abc">y</div>
+        <div class="abc">z</div>
     </div>
+    
+    <script>
+        const screenDisplay = document.getElementById("screen-display");
+        for (let i = 0; i <= 360; i++) {
+            const numDiv = document.createElement("div");
+            numDiv.classList.add("num");
+            numDiv.innerHTML = i;
+            screenDisplay.appendChild(numDiv);
+        }
+    </script>
 
-    <div>Row Count: <span id="rowCount">0</span></div>
-    <div class="developer">
-      Developer: Kwan, Eric
-      <span id="counter">##</span>
+    <div class="developer">Developer: Eric Kwan
+        <span id="rowCount">##</span>
     </div>
+    <script src="counter.js"></script>
+    <script src="ABC123Counter.js"></script>
+</body>
 
-    <script src="/ABC123Counter.js"></script>
-  </body>
 </html>

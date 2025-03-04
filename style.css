@@ -1,15 +1,20 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 10pt;
+  font-size: 15pt;
 }
 
-div.developer {
+h1 {
+  font-size: 200%;
+}
+
+.developer {
   font-size: 90%;
 }
 
 div.abc,
 div.abcS52,
-div.abcS26 {
+div.abcS26,
+div.num {
   font-size: 35pt;
   float: left;
   margin: 3.6px;
@@ -22,9 +27,9 @@ div.abcS26 {
 
 div.abcS52 {
   font-size: 25pt;
-  height: 0.83in;
-  width: 0.85in;
-  padding-top: 26px;
+  height: .83in;
+  width: .85in;
+  padding-top: 25px;
   margin-right: 8px;
 }
 
@@ -35,12 +40,29 @@ div.abcS26 {
   padding-top: 15px;
 }
 
-div.highLight {
+div.num{
+  font-size: 15pt;
+  height: .35in;
+  width: .5in;
+  padding-top: 7px;
+  margin-right: 8px;
+}
+
+.abc.highLight {
   background-color: antiquewhite;
   border: dashed 1px black;
+
+}
+
+
+.highLight {
+  background-color: antiquewhite;
+  border: dashed 1px black;
+
 }
 
 #screen-display {
+
   height: 11in;
   width: 10in;
   display: block;
@@ -53,17 +75,17 @@ div.highLight {
 }
 
 #fsMode {
-  width: 5.55in;
+  width: 5.5in;
 }
 
 #fsMode span {
-  width: 1.5in;
+  width: 1.6in;
   display: inline-block;
   margin-bottom: 3px;
 }
 
 #fsHighlight {
-  width: 3.55in;
+  width: 3.5in;
 }
 
 #fsHighlight span {
